@@ -1,7 +1,7 @@
 import Expenses from "./components/Expenses";
 
 function App() {
-  const expenses = [
+  const expensesArr = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started</h2>
-      {/* <Expenses expenses={expenses}></Expenses> */}
+      <Expenses expenses={expensesArr}/>
     </div>
   );
 
