@@ -6,7 +6,7 @@ import './Expenses.css';
 import ExpensesFilter from './ExpensesFilter';
 
 const Expenses = (props) => {
-  const [selectedYear, setSelectedYear] = useState('');
+  const [selectedYear, setSelectedYear] = useState('2000');
   const saveSelectedExpenseYearHandler = (enteredYearSelectedData) => {
     console.log(enteredYearSelectedData)
     setSelectedYear(enteredYearSelectedData);
@@ -14,7 +14,7 @@ const Expenses = (props) => {
 
   return (
     <div>
-        <ExpensesFilter onSaveSelectedExpenseYear={saveSelectedExpenseYearHandler}/>
+        <ExpensesFilter selected={selectedYear} onSaveSelectedExpenseYear={saveSelectedExpenseYearHandler}/>
     <Card className="expenses">
       <ExpenseItem
         title={props.items[0].title}
